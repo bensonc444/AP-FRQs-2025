@@ -1,0 +1,25 @@
+public class SignedText{
+    private String last;
+    private String first;
+    public SignedText(String first, String last){
+        this.last= last;
+        this.first = first;
+    }
+    public String getSignature(){
+        if (first.length()!=0){
+            return first+"-"+last;
+        }
+        else{
+            return last;
+        }
+    }
+    public String addSignature(String str){
+        if (str.indexOf(getSignature())==-1){
+            return str + getSignature();
+        }
+        if (str.indexOf(getSignature())==0){
+            return str.substring(getSignature().length())+getSignature();
+        }
+        return str;
+    }
+}
