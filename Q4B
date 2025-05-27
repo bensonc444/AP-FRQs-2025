@@ -1,0 +1,13 @@
+public boolean clearPair(int row,int col){
+  for (int i=0;i<puzzle.length;i++){
+    for (int h=0; h<puzzle[0].length;h++){
+      if (i!=row|| h!=col){
+        if (puzzle[row][col]==puzzle[i][h]==10){
+          puzzle[row][col]=0;
+          puzzle[i][h]=0;
+          return true;
+        }
+      }
+    }
+  }
+}
