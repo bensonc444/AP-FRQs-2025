@@ -1,0 +1,8 @@
+public SumOrSameGame(int numRows,int numCols){
+  puzzle = new int [numRows][numCols];
+  for (int i=0; i<puzzle.length;i++){
+    for (int h=0;h<puzzle[0].length;h++){
+      puzzle[i][h] =(jnt)(Math.random()*9)+1;
+    }
+  }
+}
